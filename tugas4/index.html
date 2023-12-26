@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function image_picker(){
+            const list_image = ["beruang_coklat.png", "beruang_putih.png", "beruang_hitam_putih.png"];
+            let pilihan = document.getElementById("opsi").value;
+
+            if( pilihan == "beruang coklat"){
+                let select = list_image[0]; //beruang_coklat.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if ( pilihan == "beruang putih"){
+                let select = list_image[1]; //beruang_putih.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if ( pilihan == "beruang hitam putih"){
+                let select = list_image[2]; //beruang_hitam_putih.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+
+    <select name="" id="opsi" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="beruang coklat"> Beruang Coklat </option>
+        <option value="beruang putih"> Beruang Putih </option>
+        <option value="beruang hitam putih"> Beruang Hitam Putih </option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="200px">
+    </div>
+
+</body>
+</html>
